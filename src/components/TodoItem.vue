@@ -7,6 +7,7 @@
         <label>
             <input type="checkbox" v-on:change="markAsCompleted" />
         </label>
+        <button @click="$emit('del-todo', todo.id)">Delete</button>
         <h3>{{ todo.title }}</h3>
         <h3>{{ todo.id }}</h3>
     </div>
