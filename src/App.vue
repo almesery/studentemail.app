@@ -1,28 +1,55 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png"/>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+        <MainComponent msg="Welcome to Your Vue.js App" />
+        <Todos :todos="todos" />
+    </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import MainComponent from './components/MainComponent.vue'
+import Todos from '@/components/Todos'
 
 export default {
-  name: "App",
-  components: {
-    HelloWorld,
-  },
-};
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    name: 'App',
+    components: {
+        MainComponent,
+        Todos,
+    },
+    data() {
+        return {
+            todos: [
+                {
+                    id: 1,
+                    title: 'This is the title',
+                    completed: false,
+                },
+                {
+                    id: 2,
+                    title: 'This is the title',
+                    completed: true,
+                },
+                {
+                    id: 3,
+                    title: 'This is the title',
+                    completed: true,
+                },
+                {
+                    id: 4,
+                    title: 'This is the title',
+                    completed: true,
+                },
+                {
+                    id: 5,
+                    title: 'This is the title',
+                    completed: true,
+                },
+                {
+                    id: 6,
+                    title: 'This is the title',
+                    completed: true,
+                },
+            ],
+        }
+    },
 }
-</style>
+</script>
